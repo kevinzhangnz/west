@@ -1,1 +1,10 @@
-<p>posts works!</p>
+<div class="card-columns m-3">
+  <div class="card bg-transparent shadow-sm" *ngFor="let post of posts">
+    <a routerLink="/posts/{{post.id}}">
+      <div class="card-body">
+        <h4 class="card-title text-primary">{{post.title}}</h4>
+        <p class="card-text text-dark">{{post.body}}</p>
+      </div>
+    </a>
+  </div>
+</div>
