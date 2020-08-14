@@ -3,7 +3,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { HomeComponent, LoaderComponent } from '@components/index';
+import { HomeComponent, LayoutComponent, LoaderComponent, MenuComponent } from '@components/index';
 import { Configuration } from '@config/index';
 import { LoaderInterceptor } from '@interceptors/index';
 import { LoaderService } from '@services/index';
@@ -14,7 +14,9 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoaderComponent
+    LoaderComponent,
+    MenuComponent,
+    LayoutComponent
   ],
   imports: [
     AppRoutingModule,
