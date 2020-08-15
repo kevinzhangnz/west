@@ -1,14 +1,13 @@
 <div class="card bg-transparent border-0 m-3" *ngIf="post">
-  <div class="card-body">
-    <h3 class="card-title text-primary">{{post.title}}</h3>
-    <p class="card-text text-dark">{{post.body}}</p>
+  <div class="card-body bg-primary">
+    <h3 class="card-title text-white">{{post.title}}</h3>
+    <p class="card-text text-white">{{post.body}}</p>
   </div>
   <div calss="card-body">
     <ng-container *ngIf="comments">
-      <div class="comment bg-light bd-callout rounded shadow-sm m-3 p-3" *ngFor="let comment of comments; let even = even; let odd = odd"
-        [ngClass]="{ 'odd mr-5': even, 'even ml-5': odd }">
+      <div class="comment bd-callout rounded-0 my-3 p-3" *ngFor="let comment of comments; let even = even; let odd = odd"
+        [ngClass]="{ 'odd mr-4 bg-light text-dark': even, 'even ml-4 bg-dark text-white': odd }">
         <p>{{comment.name}}</p>
-        <p>{{comment.email}}</p>
         <p>{{comment.body}}</p> 
       </div>
     </ng-container>

@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
+
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnDestroy, OnInit {
+  private onDestroy$ = new Subject<void>();
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.events.pipe(takeUntil(this.onDestroy$))
+      .subscribe(event => {
+        if (event instanceof NavigationStart) {
+          const menu = document.querySelector('.navbar-collapse');
+          menu.classList.remove('show');
+        }
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
+    this.onDestroy$.next();
+    this.onDestroy$.complete();
   }
 
 }

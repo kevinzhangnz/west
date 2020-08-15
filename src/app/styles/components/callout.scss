@@ -1,12 +1,8 @@
 .bd-callout {
-  border: 1px solid #ccc;
-
   &.odd {
-    border-left-width: .25rem;
-    border-left-color: #5bc0de;
+    border-left: .5rem solid #5bc0de;
   }
   &.even {
-    border-right-width: .25rem;
-    border-right-color: #FFC107;
+    border-right: .5rem solid #FFC107;
   }
 }

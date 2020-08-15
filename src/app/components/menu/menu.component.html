@@ -1,11 +1,17 @@
-<nav class="site-header sticky-top py-1">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-inline-block" routerLink="/" routerLinkActive="active">Home</a>
-        <a class="py-2 d-inline-block" routerLink="/posts" routerLinkActive="active">Posts</a>
-        <a class="py-2 d-inline-block" routerLink="#" routerLinkActive="active">Comments</a>
-        <a class="py-2 d-inline-block" routerLink="#" routerLinkActive="active">Albums</a>
-        <a class="py-2 d-inline-block" routerLink="#" routerLinkActive="active">Photos</a>
-        <a class="py-2 d-inline-block" routerLink="#" routerLinkActive="active">Todos</a>
-        <a class="py-2 d-inline-block" routerLink="#" routerLinkActive="active">Users</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarCollapse">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="nav-item" routerLink="/posts" routerLinkActive="active">Posts</a>
+            <a class="nav-item" routerLink="#" routerLinkActive="active">Comments</a>
+            <a class="nav-item" routerLink="#" routerLinkActive="active">Albums</a>
+            <a class="nav-item" routerLink="#" routerLinkActive="active">Photos</a>
+            <a class="nav-item" routerLink="#" routerLinkActive="active">Todos</a>
+            <a class="nav-item" routerLink="#" routerLinkActive="active">Users</a>
+        </div>
     </div>
 </nav>
