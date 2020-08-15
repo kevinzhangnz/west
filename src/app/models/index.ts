@@ -1,3 +1,3 @@
-export * from './comment/comment';
-export * from './post/post';
-export * from './toast/toast';
+export * from './comment';
+export * from './post';
+export * from './toast';

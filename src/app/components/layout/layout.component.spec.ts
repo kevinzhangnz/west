@@ -1,14 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from "@angular/router/testing";
 
 import { LayoutComponent } from './layout.component';
 
-describe('LayoutComponent', () => {
+describe('Component: Layout', () => {
   let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LayoutComponent ]
+      declarations: [ LayoutComponent ],
+      imports: [ RouterTestingModule ]
     })
     .compileComponents();
   }));
