@@ -36,8 +36,7 @@ export class ErrorInterceptor implements HttpInterceptor {
           };
           const options = {
             autohide: false,
-            classname: 'bg-danger text-white my-3',
-            delay: 5000
+            classname: 'bg-danger text-white my-3'
           };
           this.toastService.show(toast, options);
 
