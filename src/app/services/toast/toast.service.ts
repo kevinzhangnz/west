@@ -10,15 +10,15 @@ export class ToastService {
 
   constructor() { }
 
-  show(toast: Toast, options: any = {}) {
+  show(toast: Toast, options: any): void {
     this.toasts.push({ ...toast, ...options });
   }
 
-  remove(toast) {
+  remove(toast: any): void {
     this.toasts = this.toasts.filter(t => t !== toast);
   }
 
-  clear() {
+  clear(): void {
     this.toasts = [];
   }
 }

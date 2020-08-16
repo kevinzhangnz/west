@@ -16,7 +16,7 @@ export class PostsService {
   constructor(private config: Configuration,
               private http: HttpClient) {
     this.apiURL = this.config.HOST + this.config.POSTS_PATH;
-    this.timeout = this.config.TIMEOUT;        
+    this.timeout = this.config.TIMEOUT;
   }
 
   /** GET posts */

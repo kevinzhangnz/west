@@ -16,7 +16,7 @@ export class CommentsService {
   constructor(private config: Configuration,
               private http: HttpClient) {
     this.apiURL = this.config.HOST + this.config.COMMENTS_PATH;
-    this.timeout = this.config.TIMEOUT;       
+    this.timeout = this.config.TIMEOUT;
   }
 
   /** Search comments with params
