@@ -13,6 +13,7 @@ export class MenuComponent implements OnDestroy, OnInit {
   private onDestroy$ = new Subject<void>();
 
   constructor(private router: Router) {
+    /* hide the menu when the navigation start on mobile */
     this.router.events.pipe(takeUntil(this.onDestroy$))
       .subscribe(event => {
         if (event instanceof NavigationStart) {
@@ -29,6 +30,7 @@ export class MenuComponent implements OnDestroy, OnInit {
     this.onDestroy$.complete();
   }
 
+  /* hide the menu on mobile */
   removeMenu(): void {
     const menu = document.querySelector('.navbar-collapse');
     menu.classList.remove('show');

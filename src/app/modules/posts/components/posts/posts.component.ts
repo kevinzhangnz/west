@@ -17,6 +17,7 @@ export class PostsComponent implements OnInit {
     this.getPosts();
   }
 
+  /* Get Posts */
   getPosts(): void {
     this.postsService.read().subscribe(data => this.posts = data);
   }

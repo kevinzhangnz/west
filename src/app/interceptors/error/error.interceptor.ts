@@ -25,11 +25,14 @@ export class ErrorInterceptor implements HttpInterceptor {
           let msg = '';
 
           if (error.error instanceof ErrorEvent) {
+            /* client side error */
             msg = `Error: ${error.error.message}`;
           } else {
+            /* server side error */
             msg = `Error Status: ${error.status}\nMessage: ${error.message}`;
           }
 
+          /* show the toast with toast and options object */
           const toast: Toast = {
             header: 'Error',
             body: msg

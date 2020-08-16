@@ -15,6 +15,7 @@ export class LayoutComponent implements OnDestroy, OnInit {
 
   constructor(private router: Router,
               private toastService: ToastService) {
+    /* clear any toast when the navigation start */
     this.router.events.pipe(takeUntil(this.onDestroy$))
       .subscribe(event => {
         if (event instanceof NavigationStart) {
