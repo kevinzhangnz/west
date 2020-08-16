@@ -20,7 +20,7 @@ export class LayoutComponent implements OnDestroy, OnInit {
         if (event instanceof NavigationStart) {
           this.toastService.clear();
         }
-    })
+    });
   }
 
   ngOnInit(): void {

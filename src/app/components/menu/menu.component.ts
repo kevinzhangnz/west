@@ -16,10 +16,9 @@ export class MenuComponent implements OnDestroy, OnInit {
     this.router.events.pipe(takeUntil(this.onDestroy$))
       .subscribe(event => {
         if (event instanceof NavigationStart) {
-          const menu = document.querySelector('.navbar-collapse');
-          menu.classList.remove('show');
+          this.removeMenu();
         }
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -30,4 +29,8 @@ export class MenuComponent implements OnDestroy, OnInit {
     this.onDestroy$.complete();
   }
 
+  removeMenu(): void {
+    const menu = document.querySelector('.navbar-collapse');
+    menu.classList.remove('show');
+  }
 }
