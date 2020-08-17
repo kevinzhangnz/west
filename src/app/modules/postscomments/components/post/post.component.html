@@ -1,7 +1,7 @@
 <div class="card border-0 rounded-0 bg-transparent" data-cy="post" (click)="isCollapsed = !isCollapsed">
   <div class="card-body">
-    <h4 class="card-title">{{post.title}}</h4>
-    <p class="card-text">{{post.body}}</p>
+    <h4 class="card-title" data-cy="post_title">{{post.title}}</h4>
+    <p class="card-text" data-cy="post_body">{{post.body}}</p>
     <h6>Comments</h6>
     <hr />
     <div [ngbCollapse]="isCollapsed">

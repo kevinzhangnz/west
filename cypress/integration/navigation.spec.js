@@ -16,6 +16,11 @@ context('Navigation', () => {
     cy.url().should('include', '/posts')
   })
 
+  it('should navigate to PostsComments page', () => {
+    cy.get('[data-cy=menu_postscomments]').click()
+    cy.url().should('include', '/postscomments')
+  })
+
   it('should show responsive menu on mobile', () => {
     cy.get('[data-cy=menu]').should('be.visible')
 
