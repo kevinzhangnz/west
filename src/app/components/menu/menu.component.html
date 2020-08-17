@@ -1,12 +1,13 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" routerLink="/" routerLinkActive="active">Home</a>
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active" data-cy="menu_home">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+        aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation"
+        data-cy="menu_toggle">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-collapse collapse" id="navbarCollapse">
+    <div class="navbar-collapse collapse" id="navbarCollapse" data-cy="menu">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="nav-item" routerLink="/posts" routerLinkActive="active">Posts</a>
+            <a class="nav-item" routerLink="/posts" routerLinkActive="active" data-cy="menu_posts">Posts</a>
             <a class="nav-item" routerLink="#" routerLinkActive="active">Comments</a>
             <a class="nav-item" routerLink="#" routerLinkActive="active">Albums</a>
             <a class="nav-item" routerLink="#" routerLinkActive="active">Photos</a>
