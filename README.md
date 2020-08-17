@@ -20,7 +20,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests using Cypress
 
-Run `npm run cy:run` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+Run `npm run cy:run` to execute the end-to-end tests via [Cypress](https://www.cypress.io).\
 Run `npm run cy:open` to open GUI.
 
 ## Running end-to-end tests using Protractor
