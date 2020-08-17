@@ -1,0 +1,15 @@
+.post {
+  background: #f8f9fa;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:nth-child(2n+1) {
+    color: white;
+    background: #343a40;
+  }
+  &:nth-child(3n+1) {
+    color: white;
+    background: #007bff;
+  }
+}
