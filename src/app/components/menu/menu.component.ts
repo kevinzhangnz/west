@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
-
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -32,7 +31,7 @@ export class MenuComponent implements OnDestroy, OnInit {
 
   /* hide the menu on mobile */
   removeMenu(): void {
-    const menu = document.querySelector('.navbar-collapse');
+    const menu = document.querySelector('#navbarCollapse');
     menu.classList.remove('show');
   }
 }

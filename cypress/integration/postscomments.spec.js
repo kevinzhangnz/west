@@ -13,7 +13,7 @@ context('PostsComments', () => {
     cy.get('[data-cy=post_title]').first().should('be.visible')
     cy.get('[data-cy=post_body]').first().should('be.visible')
 
-    cy.get('.post').first().click()
+    cy.get('[data-cy=post]').first().click()
     cy.get('[data-cy=comment]').first().should('be.visible')
     cy.get('[data-cy=comment_name]').first().should('be.visible')
     cy.get('[data-cy=comment_body]').first().should('be.visible')

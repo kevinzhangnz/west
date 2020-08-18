@@ -11,7 +11,7 @@ context('Posts', () => {
     cy.url().should('include', '/posts')
     cy.get('[data-cy=post]').first().should('be.visible')
 
-    cy.get('.post_0').click()
+    cy.get('[data-cy=post]').first().click()
     cy.url().should('include', '/posts/1')
     cy.get('[data-cy=post]').should('be.visible')
     cy.get('[data-cy=post_title]').should('be.visible')
