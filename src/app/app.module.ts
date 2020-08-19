@@ -22,7 +22,7 @@ import { LayoutComponent } from './components/layout/layout.component';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     NgbModule
   ],
